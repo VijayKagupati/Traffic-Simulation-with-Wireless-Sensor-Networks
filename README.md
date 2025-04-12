@@ -244,9 +244,6 @@ For more details, refer to the [NS-3 documentation](https://www.nsnam.org/docs/r
 
 ---
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
