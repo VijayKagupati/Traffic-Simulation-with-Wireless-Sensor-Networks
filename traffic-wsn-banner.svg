@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#303f9f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Road pattern -->
+    <pattern id="roadPattern" patternUnits="userSpaceOnUse" width="40" height="10" patternTransform="rotate(0)">
+      <rect width="40" height="10" fill="#333333" />
+      <rect x="0" y="4" width="20" height="2" fill="white" />
+    </pattern>
+    
+    <!-- Node glow effect -->
+    <filter id="nodeGlow" height="300%" width="300%" x="-100%" y="-100%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+    </filter>
+    
+    <!-- Traffic light circle -->
+    <radialGradient id="redLight" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#ffcccc" />
+      <stop offset="100%" stop-color="#ff0000" />
+    </radialGradient>
+    <radialGradient id="yellowLight" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#ffffcc" />
+      <stop offset="100%" stop-color="#ffcc00" />
+    </radialGradient>
+    <radialGradient id="greenLight" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#ccffcc" />
+      <stop offset="100%" stop-color="#00cc00" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main Background -->
+  <rect width="900" height="200" fill="url(#bgGradient)" />
+  
+  <!-- Circuit Board-like pattern -->
+  <g stroke="#4FC3F7" stroke-width="1" opacity="0.2">
+    <line x1="50" y1="20" x2="850" y2="20" />
+    <line x1="50" y1="60" x2="850" y2="60" />
+    <line x1="50" y1="100" x2="850" y2="100" />
+    <line x1="50" y1="140" x2="850" y2="140" />
+    <line x1="50" y1="180" x2="850" y2="180" />
+    
+    <line x1="100" y1="0" x2="100" y2="200" />
+    <line x1="200" y1="0" x2="200" y2="200" />
+    <line x1="300" y1="0" x2="300" y2="200" />
+    <line x1="400" y1="0" x2="400" y2="200" />
+    <line x1="500" y1="0" x2="500" y2="200" />
+    <line x1="600" y1="0" x2="600" y2="200" />
+    <line x1="700" y1="0" x2="700" y2="200" />
+    <line x1="800" y1="0" x2="800" y2="200" />
+  </g>
+  
+  <!-- Road network -->
+  <rect x="100" y="80" width="700" height="40" fill="url(#roadPattern)" />
+  <rect x="430" y="30" width="40" height="140" fill="url(#roadPattern)" />
+  
+  <!-- Wireless nodes and connections -->
+  <g filter="url(#nodeGlow)">
+    <!-- Central node (FPC) -->
+    <circle cx="450" cy="50" r="12" fill="#FF9800" stroke="#FFA726" stroke-width="2" />
+    
+    <!-- Router nodes (FFD) -->
+    <circle cx="350" cy="65" r="8" fill="#03A9F4" stroke="#29B6F6" stroke-width="2" />
+    <circle cx="550" cy="65" r="8" fill="#03A9F4" stroke="#29B6F6" stroke-width="2" />
+    
+    <!-- Sensor nodes (RFD) -->
+    <circle cx="250" cy="80" r="6" fill="#4CAF50" stroke="#66BB6A" stroke-width="1" />
+    <circle cx="350" cy="100" r="6" fill="#4CAF50" stroke="#66BB6A" stroke-width="1" />
+    <circle cx="450" cy="100" r="6" fill="#4CAF50" stroke="#66BB6A" stroke-width="1" />
+    <circle cx="550" cy="100" r="6" fill="#4CAF50" stroke="#66BB6A" stroke-width="1" />
+    <circle cx="650" cy="80" r="6" fill="#4CAF50" stroke="#66BB6A" stroke-width="1" />
+    
+    <!-- Wireless connections -->
+    <path d="M 250,80 Q 300,60 350,65" stroke="#BBDEFB" stroke-width="1" stroke-dasharray="3,2" fill="none" />
+    <path d="M 350,100 Q 350,80 350,65" stroke="#BBDEFB" stroke-width="1" stroke-dasharray="3,2" fill="none" />
+    <path d="M 350,65 Q 400,50 450,50" stroke="#BBDEFB" stroke-width="1.5" stroke-dasharray="5,2" fill="none" />
+    <path d="M 450,100 Q 450,75 450,50" stroke="#BBDEFB" stroke-width="1" stroke-dasharray="3,2" fill="none" />
+    <path d="M 550,100 Q 550,80 550,65" stroke="#BBDEFB" stroke-width="1" stroke-dasharray="3,2" fill="none" />
+    <path d="M 550,65 Q 500,50 450,50" stroke="#BBDEFB" stroke-width="1.5" stroke-dasharray="5,2" fill="none" />
+    <path d="M 650,80 Q 600,60 550,65" stroke="#BBDEFB" stroke-width="1" stroke-dasharray="3,2" fill="none" />
+    
+    <!-- Data packets -->
+    <circle cx="270" cy="75" r="2" fill="white">
+      <animate attributeName="cx" from="250" to="350" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="cy" from="80" to="65" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="380" cy="60" r="2" fill="white">
+      <animate attributeName="cx" from="350" to="450" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="cy" from="65" to="50" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="500" cy="58" r="2" fill="white">
+      <animate attributeName="cx" from="550" to="450" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="cy" from="65" to="50" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Car objects -->
+  <g>
+    <!-- Regular car 1 -->
+    <rect x="150" y="88" width="20" height="10" rx="2" fill="#E91E63" />
+    <rect x="153" y="85" width="14" height="5" rx="1" fill="#F48FB1" />
+    <circle cx="155" cy="98" r="3" fill="#333333" />
+    <circle cx="165" cy="98" r="3" fill="#333333" />
+    
+    <!-- Regular car 2 -->
+    <rect x="220" y="102" width="20" height="10" rx="2" fill="#673AB7" />
+    <rect x="223" y="99" width="14" height="5" rx="1" fill="#B39DDB" />
+    <circle cx="225" cy="112" r="3" fill="#333333" />
+    <circle cx="235" cy="112" r="3" fill="#333333" />
+    
+    <!-- Emergency vehicle -->
+    <rect x="500" y="88" width="25" height="12" rx="2" fill="white" />
+    <rect x="504" y="84" width="17" height="6" rx="1" fill="#ECEFF1" />
+    <circle cx="507" cy="100" r="3" fill="#333333" />
+    <circle cx="520" cy="100" r="3" fill="#333333" />
+    <rect x="508" y="84" width="8" height="2" fill="#F44336">
+      <animate attributeName="fill" values="#F44336;#3F51B5;#F44336" dur="1s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Self-driving car -->
+    <rect x="600" y="102" width="22" height="10" rx="3" fill="#00BCD4" />
+    <rect x="603" y="99" width="16" height="5" rx="2" fill="#80DEEA" />
+    <circle cx="605" cy="112" r="3" fill="#333333" />
+    <circle cx="617" cy="112" r="3" fill="#333333" />
+    <circle cx="614" cy="102" r="2" fill="#B2EBF2">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Traffic light -->
+  <g>
+    <rect x="430" y="30" width="10" height="30" rx="2" fill="#424242" />
+    <circle cx="435" cy="35" r="3" fill="url(#redLight)" />
+    <circle cx="435" cy="45" r="3" fill="url(#yellowLight)" />
+    <circle cx="435" cy="55" r="3" fill="url(#greenLight)">
+      <animate attributeName="fill-opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Title -->
+  <g>
+    <text x="450" y="150" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="white">
+      Traffic Simulation with WSN
+    </text>
+    <text x="450" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#B3E5FC">
+      Intelligent Traffic Management using NS-3 and SUMO
+    </text>
+  </g>
+</svg>
