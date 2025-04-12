@@ -17,6 +17,8 @@ This project integrates the Network Simulator 3 (NS-3) with SUMO (Simulation of 
 * [Troubleshooting](#troubleshooting)
 
 ## Overview
+![diagram-export-12-4-2025-7_21_28-am](https://github.com/user-attachments/assets/8be977b9-9fb5-4fb3-89bb-4559f951419a)
+
 This project demonstrates intelligent traffic management by:
 1. Simulating wireless sensor networks that collect traffic data using NS-3
 2. Using the collected data to dynamically adjust traffic signals in SUMO
@@ -152,6 +154,8 @@ The WSN component simulates sensor nodes deployed at traffic intersections. Thes
 - Operate on limited power with energy conservation protocols
 
 ### 2. SUMO Traffic Simulation
+![image](https://github.com/user-attachments/assets/203829df-ad08-43ca-bf67-91ad68fad3dc)
+
 The traffic simulation includes:
    * Road networks with multiple junctions
    * Traffic lights with configurable timing
