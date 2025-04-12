@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Buildings from the top-left quadrant -->
+    <poly id="building1" type="building" color="255,211,155" fill="1" layer="1" shape="50,250 100,250 100,300 50,300"/>
+    <poly id="building2" type="building" color="255,211,155" fill="1" layer="1" shape="120,280 170,280 170,350 120,350"/>
+    <poly id="building3" type="building" color="255,211,155" fill="1" layer="1" shape="30,320 80,320 80,380 30,380"/>
+    
+    <!-- Buildings from the top-right quadrant -->
+    <poly id="building4" type="building" color="255,211,155" fill="1" layer="1" shape="240,300 340,300 340,350 240,350"/>
+    <poly id="building5" type="building" color="255,211,155" fill="1" layer="1" shape="280,230 330,230 330,280 280,280"/>
+    <poly id="building6" type="building" color="255,211,155" fill="1" layer="1" shape="350,250 380,250 380,280 350,280"/>
+    
+    <!-- Buildings from the bottom-left quadrant -->
+    <poly id="building7" type="building" color="255,211,155" fill="1" layer="1" shape="60,100 140,100 140,180 60,180"/>
+    <poly id="building8" type="building" color="255,211,155" fill="1" layer="1" shape="30,50 90,50 90,80 30,80"/>
+    <poly id="building9" type="building" color="255,211,155" fill="1" layer="1" shape="150,50 190,50 190,80 150,80"/>
+    
+    <!-- Buildings from the bottom-right quadrant -->
+    <poly id="building10" type="building" color="255,211,155" fill="1" layer="1" shape="250,50 380,50 380,150 250,150"/>
+    <poly id="building11" type="building" color="255,211,155" fill="1" layer="1" shape="240,170 290,170 290,190 240,190"/>
+</additional>

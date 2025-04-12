@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Define vehicle types -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="55.56" guiShape="passenger"/>
+    <vType id="bus" accel="2.0" decel="4.0" sigma="0.5" length="12" minGap="3" maxSpeed="33.33" guiShape="bus"/>
+    <vType id="truck" accel="1.8" decel="3.5" sigma="0.5" length="9" minGap="3" maxSpeed="27.78" guiShape="truck"/>
+    
+    <!-- Define routes -->
+    <route id="eastToWest" edges="east_to_center center_to_west"/>
+    <route id="westToEast" edges="west_to_center center_to_east"/>
+    <route id="northToSouth" edges="north_to_center center_to_south"/>
+    <route id="southToNorth" edges="south_to_center center_to_north"/>
+    <route id="eastToNorth" edges="east_to_center center_to_north"/>
+    <route id="eastToSouth" edges="east_to_center center_to_south"/>
+    <route id="westToNorth" edges="west_to_center center_to_north"/>
+    <route id="westToSouth" edges="west_to_center center_to_south"/>
+    <route id="northToEast" edges="north_to_center center_to_east"/>
+    <route id="northToWest" edges="north_to_center center_to_west"/>
+    <route id="southToEast" edges="south_to_center center_to_east"/>
+    <route id="southToWest" edges="south_to_center center_to_west"/>
+    
+    <!-- Define vehicle flows -->
+    <flow id="carFlow1" type="car" route="eastToWest" begin="0" end="3600" vehsPerHour="300"/>
+    <flow id="carFlow2" type="car" route="westToEast" begin="0" end="3600" vehsPerHour="300"/>
+    <flow id="carFlow3" type="car" route="northToSouth" begin="0" end="3600" vehsPerHour="300"/>
+    <flow id="carFlow4" type="car" route="southToNorth" begin="0" end="3600" vehsPerHour="300"/>
+    <flow id="carFlow5" type="car" route="eastToNorth" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow6" type="car" route="eastToSouth" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow7" type="car" route="westToNorth" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow8" type="car" route="westToSouth" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow9" type="car" route="northToEast" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow10" type="car" route="northToWest" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow11" type="car" route="southToEast" begin="0" end="3600" vehsPerHour="100"/>
+    <flow id="carFlow12" type="car" route="southToWest" begin="0" end="3600" vehsPerHour="100"/>
+    
+    <!-- Add some buses -->
+    <flow id="busFlow1" type="bus" route="eastToWest" begin="0" end="3600" period="600"/>
+    <flow id="busFlow2" type="bus" route="northToSouth" begin="0" end="3600" period="600"/>
+    
+    <!-- Add some trucks -->
+    <flow id="truckFlow1" type="truck" route="westToEast" begin="0" end="3600" period="900"/>
+    <flow id="truckFlow2" type="truck" route="southToNorth" begin="0" end="3600" period="900"/>
+</routes>

@@ -1,0 +1,39 @@
+# NS-3 build files
+*.o
+*.so
+*.a
+*.pyc
+__pycache__/
+.waf*
+build/
+.build/
+
+# Simulation output data
+*.pcap
+*.tr
+*.mob
+*.routes
+
+# Keep specific data files if needed (but generally ignore large data)
+# !traffic_sensor_data.csv  # Uncomment to keep this specific file
+
+# SUMO generated files
+*.sumo.cfg.*
+*.netstate.xml
+*.net.xml.gz
+
+# Windows/WSL specific files
+*:Zone.Identifier
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Log files
+*.log
