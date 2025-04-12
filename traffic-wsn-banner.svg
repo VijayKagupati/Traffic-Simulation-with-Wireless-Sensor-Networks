@@ -58,7 +58,7 @@
   
   <!-- Road network -->
   <rect x="100" y="80" width="700" height="40" fill="url(#roadPattern)" />
-  <rect x="430" y="30" width="40" height="140" fill="url(#roadPattern)" />
+  <rect x="430" y="30" width="40" height="70" fill="url(#roadPattern)" />
   
   <!-- Wireless nodes and connections -->
   <g filter="url(#nodeGlow)">
