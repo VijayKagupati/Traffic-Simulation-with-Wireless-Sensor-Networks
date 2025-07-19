@@ -250,8 +250,3 @@ For more details, refer to the [NS-3 documentation](https://www.nsnam.org/docs/r
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Acknowledgements
-- NS-3 and SUMO development teams
-- Contributors to the TraCI interface
-- All researchers in intelligent transportation systems
