@@ -247,6 +247,3 @@ Edit the simulation parameters in run-simulation.sh to test different scenarios:
 For more details, refer to the [NS-3 documentation](https://www.nsnam.org/docs/release/3.43/tutorial/html/index.html) and [SUMO documentation](https://sumo.dlr.de/docs/).
 
 ---
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
